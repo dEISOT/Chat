@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChatData\ChatData.csproj" />
+    <ProjectReference Include="..\ChatModel\ChatModel.csproj" />
   </ItemGroup>
 
 </Project>
