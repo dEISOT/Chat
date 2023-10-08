@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAPI", "ChatAPI\ChatAPI.csproj", "{6ABFE514-8D70-40A2-8F20-D245D27DFBEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatData", "ChatData\ChatData.csproj", "{FAB00910-CE6B-461B-B585-E03CA3F27744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatCore", "ChatCore\ChatCore.csproj", "{D64F374C-FBFD-47F0-8685-D0EF590AD886}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ABFE514-8D70-40A2-8F20-D245D27DFBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABFE514-8D70-40A2-8F20-D245D27DFBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABFE514-8D70-40A2-8F20-D245D27DFBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABFE514-8D70-40A2-8F20-D245D27DFBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAB00910-CE6B-461B-B585-E03CA3F27744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB00910-CE6B-461B-B585-E03CA3F27744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB00910-CE6B-461B-B585-E03CA3F27744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB00910-CE6B-461B-B585-E03CA3F27744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64F374C-FBFD-47F0-8685-D0EF590AD886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64F374C-FBFD-47F0-8685-D0EF590AD886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64F374C-FBFD-47F0-8685-D0EF590AD886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64F374C-FBFD-47F0-8685-D0EF590AD886}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D427D5D-D82C-4680-8120-6266EDAF3D50}
+	EndGlobalSection
+EndGlobal
