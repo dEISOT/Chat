@@ -1,12 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ChatData.Contexts;
+using ChatData.Entities;
+using ChatData.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace ChatData.Repositories
 {
-    internal class UserRepository
+    public class UserRepository : IUserRepository
     {
+        public readonly ApplicationDbContext _db;
+
+        public UserRepository(ApplicationDbContext db)
+        {
+            _db = db;
+        }
+
+        public async Task<Guid> AddUsersAsync(User user)
+        {
+            _db.Users.Add(user);
+            await _db.SaveChangesAsync();
+            return user.Id;
+        }
+
+        public async Task<IEnumerable<User>> GetAllUsersAsync()
+        {
+            return await _db.Users.ToListAsync();
+        }
     }
 }
