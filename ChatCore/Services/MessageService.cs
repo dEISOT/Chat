@@ -17,9 +17,9 @@ namespace ChatCore.Services
             _mapper = mapper;
         }
 
-        public async Task AddMessageAsync(Message message)
+        public async Task<Guid> AddMessageAsync(Message message)
         {
-            await _messageRepository.AddMessageAsync(message);
+            return await _messageRepository.AddMessageAsync(message);
         }
 
         public async Task<IEnumerable<MessageDTO>> GetConversationMessages(Guid conversationId)

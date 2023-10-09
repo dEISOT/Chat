@@ -14,10 +14,11 @@ namespace ChatData.Repositories
             _db = db;
         }
 
-        public async Task AddMessageAsync(Message message)
+        public async Task<Guid> AddMessageAsync(Message message)
         {
             _db.Messages.Add(message);
             await _db.SaveChangesAsync();
+            return message.Id;
         }
 
         public async Task<IEnumerable<Message>> GetConversationMessages(Guid conversationId)

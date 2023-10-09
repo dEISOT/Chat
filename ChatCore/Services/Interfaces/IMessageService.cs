@@ -6,6 +6,6 @@ namespace ChatCore.Services.Interfaces
     public interface IMessageService
     {
         public Task<IEnumerable<MessageDTO>> GetConversationMessages(Guid conversationId);
-        public Task AddMessageAsync(Message message);
+        public Task<Guid> AddMessageAsync(Message message);
     }
 }

@@ -20,7 +20,7 @@ namespace ChatCore.Services
         public async Task<Guid> AddUserAsync(UserDTO userDTO)
         {
             var user = _mapper.Map<User>(userDTO);
-            var userId = await _userRepository.AddUsersAsync(user);
+            var userId = await _userRepository.AddUserAsync(user);
             return userId;
         }
 

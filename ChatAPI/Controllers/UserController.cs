@@ -28,7 +28,7 @@ namespace ChatAPI.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> AddUser([FromBody] UserDTO model)
+        public async Task<IActionResult> AddUserAsync([FromBody] UserDTO model)
         {
             try
             {
