@@ -1,5 +1,5 @@
-﻿using ChatCore.Services.Interfaces;
-using Microsoft.AspNetCore.Http;
+﻿using ChatCore.DTO;
+using ChatCore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatAPI.Controllers
@@ -25,6 +25,20 @@ namespace ChatAPI.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddUser([FromBody] UserDTO model)
+        {
+            try
+            {
+                var userId = await _userService.AddUserAsync(model);
+                return Ok(userId);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+                throw;
             }
         }
     }
