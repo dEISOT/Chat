@@ -56,25 +56,9 @@ namespace ChatAPI.Hubs
             await _chatHubService.DisconnectUserFromConversation(conversationId, userId);
         }
 
-        public async Task ConnectToConversation(Guid conversationId, string message, Guid userId)
+        public async Task ConnectToConversation(Guid conversationId, Guid userId)
         {
-            var conversationUsers = await _memberService.GetAllUsersInConversationAsync(conversationId);
-
-            foreach (Guid id in conversationUsers)
-            {
-                if (ConnectionMapping.TryGetValue(id, out var connectionIds))
-                {
-                    //TODO: send message
-                    foreach (var connectionId in connectionIds)
-                    {
-                        await Groups.AddToGroupAsync(connectionId, conversationId.ToString());
-                    }
-                }
-                //TODO: add message to db
-
-            }
-            await Clients.Group(conversationId.ToString()).SendAsync("BroadcastMessage", $"{userId}" + " " + "connected to conversation");
-
+            await _chatHubService.DisconnectUserFromConversation(conversationId, userId);
         }
         public override async Task OnConnectedAsync()
         {

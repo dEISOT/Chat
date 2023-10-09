@@ -16,7 +16,7 @@ namespace ChatCore.Services
         public async Task AddUsersToConversationAsync(AddMembersRequestModel requestModel)
         {
             await _memberRepository.AddUsersToConversation(requestModel.ConversationId, requestModel.UserIds);
-            //TODO : add users to hub 
+            //TODO : add users to group in hub 
         }
 
         public async Task DeleteMemberAsync(DeleteMemberRequestModel requestModel)

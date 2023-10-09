@@ -5,6 +5,7 @@ using ChatData.Repositories.Interfaces;
 using ChatData.Repositories;
 using Microsoft.EntityFrameworkCore;
 using ChatAPI.Hubs;
+using ChatCore.Mapping.AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,8 @@ builder.Services.AddScoped<IMemberService, MemberService>();
 builder.Services.AddScoped<IMemberRepository, MemberRepository>();
 builder.Services.AddScoped<ChatHubService>();
 
+//AutoMapper
+builder.Services.AddAutoMapper(typeof(UserProfile), typeof(MessageProfile), typeof(MemberProfile), typeof(ConversationProfile));
 //DB
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
