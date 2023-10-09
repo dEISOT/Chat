@@ -51,7 +51,7 @@ namespace ChatData.Contexts
                 .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.ConverstaionId)
                 .OnDelete(DeleteBehavior.Cascade);
-
+            //TODO : Add Data
             modelBuilder.Entity<User>().HasData(
                new User[]
                {

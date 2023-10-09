@@ -2,7 +2,7 @@
 using ChatCore.DTO;
 using ChatData.Entities;
 
-namespace ChatCore.Mapping
+namespace ChatCore.Mapping.AutoMapper
 {
     public class MessageProfile : Profile
     {

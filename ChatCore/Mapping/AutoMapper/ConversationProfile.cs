@@ -2,12 +2,12 @@
 using ChatCore.DTO;
 using ChatData.Entities;
 
-namespace ChatCore.Mapping
+namespace ChatCore.Mapping.AutoMapper
 {
     public class ConversationProfile : Profile
     {
-        public ConversationProfile() 
-        { 
+        public ConversationProfile()
+        {
             CreateMap<Conversation, ConversationDTO>().ReverseMap();
         }
     }
