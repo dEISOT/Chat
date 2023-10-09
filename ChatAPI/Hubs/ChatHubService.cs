@@ -36,7 +36,7 @@ namespace ChatCore.Services
             {
                 if (ConnectionMapping.TryGetValue(id, out var connectionIds))
                 {
-                    //TODO: send message
+                    
                     foreach (var connectionId in connectionIds)
                     {
                         await _hubContext.Groups.AddToGroupAsync(connectionId, conversationId.ToString());

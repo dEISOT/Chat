@@ -32,13 +32,11 @@ namespace ChatAPI.Hubs
             {
                 if (ConnectionMapping.TryGetValue(id, out var connectionIds))
                 {
-                    //TODO: send message
                     foreach (var connectionId in connectionIds)
                     {
                         await Groups.AddToGroupAsync(connectionId, conversationId.ToString());
                     }
                 }
-                //TODO: add message to db
             }
             await Clients.Group(conversationId.ToString()).SendAsync("Send", message + " " + Context.ConnectionId);
             await _messageService.AddMessageAsync(

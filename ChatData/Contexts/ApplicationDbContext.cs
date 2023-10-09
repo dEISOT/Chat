@@ -51,7 +51,7 @@ namespace ChatData.Contexts
                 .WithMany(c => c.Messages)
                 .HasForeignKey(m => m.ConverstaionId)
                 .OnDelete(DeleteBehavior.Cascade);
-            //TODO : Add Data
+            
             modelBuilder.Entity<User>().HasData(
                new User[]
                {
@@ -63,6 +63,52 @@ namespace ChatData.Contexts
                     new User{Id = new Guid("28c64207-66c6-416c-ac52-67de26fa7968"), Name = "User6"},
                     new User{Id = new Guid("cda31851-186e-484e-a113-d7d349ddffa4"), Name = "User7"},
                });
+            modelBuilder.Entity<Member>().HasData(
+                new Member[] { 
+                    new Member
+                    {
+                        UserId = new Guid("2f48bed2-c5ba-48c9-aca3-1639f75ada10"),
+                        ConversationId = new Guid("90e24547-5c73-4936-8d2e-6dd1940d1e0b")
+                    },
+                    new Member
+                    {
+                        UserId = new Guid("a6b022e2-53e0-4dfe-943a-73cb99ebd5ec"),
+                        ConversationId = new Guid("90e24547-5c73-4936-8d2e-6dd1940d1e0b")
+                    },
+                    new Member
+                    {
+                        UserId = new Guid("2f48bed2-c5ba-48c9-aca3-1639f75ada10"),
+                        ConversationId = new Guid("2bd0590b-de8f-4830-9864-440bdbb4b0be")
+                    },
+                    new Member
+                    {
+                        UserId = new Guid("a6b022e2-53e0-4dfe-943a-73cb99ebd5ec"),
+                        ConversationId = new Guid("2bd0590b-de8f-4830-9864-440bdbb4b0be")
+                    },
+                    new Member
+                    {
+                        UserId = new Guid("5331d2f7-2913-499b-abcf-2ebc004e7431"),
+                        ConversationId = new Guid("2bd0590b-de8f-4830-9864-440bdbb4b0be")
+                    },
+                });
+
+            modelBuilder.Entity<Conversation>().HasData(
+                new Conversation[] 
+                {
+                    new Conversation{
+                        CreationDate = DateTime.UtcNow,
+                        Id = new Guid("90e24547-5c73-4936-8d2e-6dd1940d1e0b"),
+                        CreatorId = new Guid("2f48bed2-c5ba-48c9-aca3-1639f75ada10"),
+                        Name = "User1User2",
+                    },
+                    new Conversation{
+                        CreationDate = DateTime.UtcNow,
+                        Id = new Guid("2bd0590b-de8f-4830-9864-440bdbb4b0be"),
+                        CreatorId = new Guid("2f48bed2-c5ba-48c9-aca3-1639f75ada10"),
+                        Name = "User1User2User3",
+                    },
+
+                });
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Conversation> Conversations { get; set; }
