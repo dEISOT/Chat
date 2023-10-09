@@ -20,7 +20,7 @@ public class UserServiceIntegrationTests : IDisposable
 
     public UserServiceIntegrationTests()
     {
-        var connectionString = "Server=tcp:localhost; Database=ChatDBTest; User Id=DESKTOP-5QGM80E\\edani; Password=password; Trust Server Certificate=True;";
+        var connectionString = "Server=DESKTOP-5QGM80E; Database=ChatDBTest; User Id=admin; Password=password; Trust Server Certificate=True;";
         _sqlConnection = new SqlConnection(connectionString);
         _sqlConnection.Open();
 
