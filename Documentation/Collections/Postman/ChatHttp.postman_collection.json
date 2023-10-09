@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "53e9f05d-dd23-45a4-aae2-5ff11da8793f",
+		"name": "ChatHttp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17197295"
+	},
+	"item": [
+		{
+			"name": "DeleteMember",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "2f48bed2-c5ba-48c9-aca3-1639f75ada10",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/conversations/delete/510a492a-296f-44e7-59da-08dbc747a8e8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"conversations",
+						"delete",
+						"510a492a-296f-44e7-59da-08dbc747a8e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddMember",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "A6B022E2-53E0-4DFE-943A-73CB99EBD5EC",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"5331D2F7-2913-499B-ABCF-2EBC004E7431\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/members/conversations/96faa80b-8650-425f-bd99-08dbc84cb9d2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"members",
+						"conversations",
+						"96faa80b-8650-425f-bd99-08dbc84cb9d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateConversation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"u1u2u3\",\r\n  \"creatorId\": \"2F48BED2-C5BA-48C9-ACA3-1639F75ADA10\",\r\n  \"userIds\": [\r\n    \"A6B022E2-53E0-4DFE-943A-73CB99EBD5EC\",\r\n    \"5331D2F7-2913-499B-ABCF-2EBC004E7431\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/v1/conversations/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"v1",
+						"conversations",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetConversationById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
