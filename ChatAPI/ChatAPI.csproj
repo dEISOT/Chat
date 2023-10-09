@@ -22,5 +22,8 @@
     <ProjectReference Include="..\ChatCore\ChatCore.csproj" />
     <ProjectReference Include="..\ChatModel\ChatModel.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="ChatTests"/>
+	</ItemGroup>
 
 </Project>

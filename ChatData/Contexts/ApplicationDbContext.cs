@@ -1,5 +1,6 @@
 ﻿using ChatData.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace ChatData.Contexts
 {
