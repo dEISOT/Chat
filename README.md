@@ -1,8 +1,7 @@
-# ShuttleX
+
 
 ### :zap: **Description**
-
-Test task for ShuttleX. Web Application built with C#,
+ Web Application built with C#,
 which provides functionality for chating between users  
 
 ### :white_check_mark: **The stack of technologies used**
